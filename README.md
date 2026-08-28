@@ -1,5 +1,4 @@
 # VsCode Snippets
 
-crtl + shift + p
-
+crtl + shift + p  
 Snippets: Configure Snippets
