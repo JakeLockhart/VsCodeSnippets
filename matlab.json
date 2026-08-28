@@ -3,20 +3,20 @@
 		"prefix": "MatLabFunction",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE}}",
-			"    % <Documentation>",
-			"        % ${1:${TM_FILENAME_BASE}}()",
-			"        %   ",
-			"        %   Created by: jsl5865",
-			"        %   ",
-			"        % Syntax:",
-			"        %   ",
-			"        % Description:",
-			"        %   ",
-			"        % Input:",
-			"        %   ",
-			"        % Output:",
-			"        %   ",
-			"    % <End Documentation>",
+			"\t% <Documentation>",
+			"\t\t% ${1:${TM_FILENAME_BASE}}()",
+			"\t\t%   ",
+			"\t\t%   Created by: jsl5865",
+			"\t\t%   ",
+			"\t\t% Syntax:",
+			"\t\t%   ",
+			"\t\t% Description:",
+			"\t\t%   ",
+			"\t\t% Input:",
+			"\t\t%   ",
+			"\t\t% Output:",
+			"\t\t%   ",
+			"\t% <End Documentation>",
 			"",
 			"end"
 		]
@@ -26,15 +26,32 @@
 		"prefix": "MatLabClass",
 		"body": [
 			"classdef ${1:${TM_FILENAME_BASE}}",
-			"    properties",
-			"    end",
+			"\tproperties",
+			"\tend",
 			"",
-			"    methods",
-			"        function obj = ${1:${TM_FILENAME_BASE}}",
-			"        end",
-			"    end",
+			"\tmethods",
+			"\t\tfunction obj = ${1:${TM_FILENAME_BASE}}",
+			"\t\tend",
+			"\tend",
 			"",
 			"end"
 		]
+	},
+
+	"MatLab Name-Value Pair Function Template": {
+		"prefix": "MatLabNameValuePair",
+		"body": [
+			"function parameters = parseParameters(varargin)",
+			"\t% Name-value pairs",
+			"\tp = inputParser;",
+			"",
+			"\taddParameter()",
+			"",
+			"\t% Parse through parameters",
+			"\tparse(p, varargin{:})",
+			"\tparameters = p.Results;",
+			"end"
+		]
 	}
+
 }
